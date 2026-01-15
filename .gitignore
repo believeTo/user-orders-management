@@ -1,0 +1,13 @@
+# Конфиги с паролями
+App/config/Config.php
+
+# Зависимости
+/vendor/
+
+# Логи
+*.log
+/logs/
+
+# Системные файлы
+.DS_Store
+.idea/

@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+// console
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$command = $argv[1] ?? 'help';
+
+switch ($command) {
+    case 'migrate':
+        $migrate = new \App\Cli\MigrateCommand();
+        $migrate->run();
+        break;
+
+    case 'seed':
+        $seed = new \App\Cli\SeedCommand();
+        $seed->run();
+        break;
+
+    case 'help':
+    default:
+        echo "Использование:\n";
+        echo "  php console migrate\n";
+        echo "  php console seed\n";
+        echo "  php console help\n";
+        break;
+}
